@@ -1,0 +1,33 @@
+# @host = https://localhost:7279
+@host = http://localhost:8088
+
+###
+
+GET {{host}}/api/permissions
+Accept: application/json
+
+###
+
+POST {{host}}/api/permissions
+Content-Type: application/json
+
+{
+  "employeeId": "a3e8f7b6-4d5c-4f3e-8b2a-9e1f3c4d5e6f",
+  "permissionTypeId": "6ba7b810-9dad-11d1-80b4-00c04fd430c8",
+  "grantedDate": "2025-02-17T00:00:00",
+  "description": "New permission added!"
+}
+
+###
+
+PUT {{host}}/api/permissions
+Content-Type: application/json
+
+{
+  "employeeId": "a3e8f7b6-4d5c-4f3e-8b2a-9e1f3c4d5e6f",
+  "permissionTypeId": "6ba7b810-9dad-11d1-80b4-00c04fd430c8",
+  "grantedDate": "2025-03-17T00:00:00",
+  "description": "Permission updated!"
+}
+
+###
