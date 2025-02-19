@@ -1,7 +1,7 @@
 # Employee Permissions System
 
 A modern .NET Core Web API system for managing employee permissions with enterprise-grade features including distributed
-storage, messaging, and monitoring capabilities.
+storage, and messaging.
 
 ## System Architecture
 
@@ -102,7 +102,6 @@ EmployeePermissions/
 3. **Get Permissions**
     - Method: GET
     - Retrieves permission records
-    - Supports filtering and pagination
 
 ### Data Flow
 
@@ -134,7 +133,7 @@ docker network create employee-permissions-network
 
 ```bash
 # Launch development services
-export DB_PASSWORD="The_strong_P4ssw0rd"
+export DB_PASSWORD="The_strong_P4ssw0rd" && \                                                                                                                                                                                                                                                                  [12:18:42]
 docker compose -f docker-compose.dev.yml up -d
 ```
 
@@ -151,9 +150,9 @@ Development Access Points:
 
 ```bash
 # Launch Containerized stack
-export CONNECTIONSTRINGS_DEFAULTCONNECTION="Server=sqlserver;Database=PermissionsDb;User Id=sa;Password=The_strong_P4ssw0rd;TrustServerCertificate=True"
-export DB_PASSWORD="The_strong_P4ssw0rd"
-export HTTP_PORT="8088"
+export CONNECTIONSTRINGS_DEFAULTCONNECTION="Server=sqlserver;Database=PermissionsDb;User Id=sa;Password=The_strong_P4ssw0rd;TrustServerCertificate=True" && \                                                                                                                                                  [12:18:42]
+export DB_PASSWORD="The_strong_P4ssw0rd" && \ 
+export HTTP_PORT="8088" && \
 docker compose up -d
 ```
 
